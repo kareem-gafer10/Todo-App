@@ -30,7 +30,7 @@ const TodoApp = () => {
     setTodos([]);
   };
 
-  const handleTodoCheckAll = () => {
+  const handleToggleCheckAll = () => {
     const allChecked = todos.every((todo) => todo.completed);
     setTodos((prevTodos) =>
       prevTodos.map((todo) => ({ ...todo, completed: !allChecked }))
@@ -47,7 +47,7 @@ const TodoApp = () => {
         len={len}
         filteredLen={filteredLen}
         handleTodoClear={handleTodoClear}
-        handleTodoCheckAll={handleTodoCheckAll}
+        handleToggleCheckAll={handleToggleCheckAll}
       />
       <Todos
         todos={todos}

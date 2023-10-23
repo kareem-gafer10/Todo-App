@@ -3,7 +3,7 @@ const TodoActions = ({
   len,
   filteredLen,
   handleTodoClear,
-  handleTodoCheckAll,
+  handleToggleCheckAll,
 }) => {
   return (
     <div className="meta">
@@ -19,8 +19,8 @@ const TodoActions = ({
         <button className="actions__clear-btn" onClick={handleTodoClear}>
           clear
         </button>
-        <button className="actions__check-btn" onClick={handleTodoCheckAll}>
-          check all
+        <button className="actions__check-btn" onClick={handleToggleCheckAll}>
+         Toggle check all
         </button>
       </div>
     </div>
