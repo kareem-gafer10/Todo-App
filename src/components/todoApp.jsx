@@ -31,15 +31,13 @@ const TodoApp = () => {
   };
 
   const handleToggleCheckAll = () => {
-    const allChecked = todos.every((todo) => todo.completed);
     setTodos((prevTodos) =>
-      prevTodos.map((todo) => ({ ...todo, completed: !allChecked }))
+      prevTodos.map((todo) => ({ ...todo, completed: !todo.completed }))
     );
   };
 
   const len = todos.length;
   const filteredLen = todos.filter((todo) => todo.completed).length;
-
   return (
     <main className="main-container">
       <TodoForm handleTodoAdd={handleTodoAdd} />

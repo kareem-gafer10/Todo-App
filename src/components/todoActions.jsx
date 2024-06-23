@@ -8,9 +8,7 @@ const TodoActions = ({
   return (
     <div className="meta">
       <div className="progress-wrapper">
-        <progress value={filteredLen} max={len}>
-          {filteredLen} / {len} completed
-        </progress>
+        <progress value={filteredLen} max={len}></progress>
         <span>
           {filteredLen} / {len} completed
         </span>
